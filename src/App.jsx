@@ -1,14 +1,14 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import MovieDetail from "../pages/MovieDetail";
+import MovieDetail from "../pages/MovieDetail.jsx";
+import Home from ".main.jsx";
 
 function App() {
-
   return (
     <div className="app">
       <Routes>
-        <Route path="/" element={}/>
-        <Route pathe="/detail" element={<MovieDetail/>}/>
+        <Route path="/" element={<Home />} />
+        <Route pathe="/detail" element={<MovieDetail />} />
       </Routes>
     </div>
   );
