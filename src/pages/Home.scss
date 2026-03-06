@@ -2,8 +2,9 @@
   background-color: black;
   min-height: 100vh;
   min-width: 100vw;
+  display: flex;
+  flex-direction: column;
   .head {
-    display: flex;
     .title {
       color: white;
       font-weight: 700;
@@ -13,8 +14,7 @@
     }
   }
   .body {
-    display: flex;
-    flex-wrap: wrap;
+    flex: 1;
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
