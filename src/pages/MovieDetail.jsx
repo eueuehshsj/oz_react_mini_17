@@ -1,4 +1,4 @@
-import data from "../../data/movieDetailData.json";
+import data from "../data/movieDetailData.json";
 import "./MovieDetail.scss";
 import React from "react";
 

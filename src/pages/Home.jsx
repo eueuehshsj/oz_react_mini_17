@@ -1,5 +1,5 @@
 import "./Home.scss";
-import MovieCard from "../components/movieCard";
+import MovieCard from "../components/MovieCard";
 
 const Home = () => {
   return (

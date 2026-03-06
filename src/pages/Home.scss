@@ -1,16 +1,23 @@
 .container {
-  padding: 20px;
   background-color: black;
+  min-height: 100vh;
+  min-width: 100vw;
   .head {
     display: flex;
-    title {
+    .title {
       color: white;
-      font-weight: 300;
+      font-weight: 700;
+      font-size: 30px;
+      margin-left: 40px;
+      margin-top: 10px;
     }
   }
   .body {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
     margin-top: 10px;
+    background-color: lime;
   }
 }
