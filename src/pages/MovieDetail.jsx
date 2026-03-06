@@ -1,7 +1,6 @@
 import data from "../../data/movieDetailData.json";
 import "./MovieDetail.scss";
 import React from "react";
-import { Link } from "react-router-dom";
 
 const MovieDetail = () => {
   const { poster_path, backdrop_path, title, vote_average, genres, overview } =
