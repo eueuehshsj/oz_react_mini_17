@@ -1,6 +1,7 @@
 import MovieCard from "../components/MovieCard";
 import MovieData from "../data/movieListData.json";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [selectedMovie, setSelectedMovie] = useState(null);
@@ -35,7 +36,18 @@ const Home = () => {
             <p className="text-9xl ">시네마 시그마</p>
           </div>
         )}
-        {selectedMovie && <div></div>}
+        {selectedMovie && (
+          <div className="flex flex-col items-center justify-center w-full h-full">
+            <div className=" text-white text-5xl m-auto text-center">
+              {selectedMovie.title}
+            </div>
+            <Link to="/detail">
+              <button className="bg-amber-400 rounded-4xl text-2xl px-6">
+                상세정보
+              </button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );
