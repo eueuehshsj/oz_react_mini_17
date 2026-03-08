@@ -42,7 +42,7 @@ const Home = () => {
               {selectedMovie.title}
             </div>
             <Link to="/detail">
-              <button className="bg-amber-400 rounded-4xl text-2xl px-6">
+              <button className="bg-amber-400 rounded-4xl text-2xl px-6 cursor-pointer hover:bg-amber-900 hover:text-white mb-10">
                 상세정보
               </button>
             </Link>
