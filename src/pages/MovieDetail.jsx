@@ -2,14 +2,13 @@ import data from "../data/movieDetailData.json";
 import React from "react";
 
 function MovieDetail() {
-  const { poster_path, backdrop_path, title, vote_average, genres, overview } =
-    data;
-  const baseUrl = `https://image.tmdb.org/t/p/w500${poster_path}`;
+  const { poster_path, title, vote_average, genres, overview } = data;
+  const posterUrl = `https://image.tmdb.org/t/p/w500${poster_path}`;
 
   return (
     <div className="bg-black flex min-h-screen">
       <div className="w-100% h-100% relative">
-        <img src={baseUrl} alt={title} />
+        <img src={posterUrl} alt={title} />
       </div>
       <div className="flex flex-col flex-1  p-4 gap-3 text-white">
         <div className="text-5xl font-bold ">{title}</div>
