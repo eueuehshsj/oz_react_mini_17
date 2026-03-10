@@ -1,8 +1,8 @@
-import data from "../data/movieDetailData.json";
-import React from "react";
+import { MovieListData } from "../data/movieListData.jsx";
 
 function MovieDetail() {
-  const { poster_path, title, vote_average, genres, overview } = data;
+  const { MovieList: MovieData } = MovieListData();
+  const { poster_path, title, vote_average, genres, overview } = MovieData;
   const posterUrl = `https://image.tmdb.org/t/p/w500${poster_path}`;
 
   return (

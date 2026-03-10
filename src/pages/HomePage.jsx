@@ -1,13 +1,15 @@
 import MovieCard from "../components/MovieCard";
-import MovieData from "../data/movieListData.json";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { MovieListData } from "../data/movieListData.jsx";
 
 const Home = () => {
   const [selectedMovie, setSelectedMovie] = useState(null);
   const cardClicked = (movie) => {
     setSelectedMovie(movie);
   };
+
+  const { MovieList: MovieData } = MovieListData();
 
   return (
     <div className="flex min-h-screen flex-col-reverse">
@@ -41,7 +43,7 @@ const Home = () => {
             <div className=" text-white text-5xl m-auto text-center">
               {selectedMovie.title}
             </div>
-            <Link to="/detail">
+            <Link to={`/detail/${selectedMovie.id}`}>
               <button className="bg-amber-400 rounded-4xl text-2xl px-6 cursor-pointer hover:bg-amber-900 hover:text-white mb-10">
                 상세정보
               </button>
