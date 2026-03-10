@@ -1,8 +1,9 @@
-import { MovieListData } from "../data/movieListData.jsx";
+import { useLocation } from "react-router-dom";
 
 function MovieDetail() {
-  const { MovieList: MovieData } = MovieListData();
-  const { poster_path, title, vote_average, genres, overview } = MovieData;
+  const location = useLocation();
+  const movie = location.state?.movie;
+  const { poster_path, title, vote_average, genres, overview } = movie;
   const posterUrl = `https://image.tmdb.org/t/p/w500${poster_path}`;
 
   return (
@@ -16,11 +17,12 @@ function MovieDetail() {
           평점 : {vote_average.toFixed(1)}/10
         </div>
         <ul className="flex  flex-wrap gap-3">
-          {genres.map((genre) => (
-            <li key={genre.id} className="px-3 py-1 bg-gray-700 rounded-full">
-              {genre.name}
-            </li>
-          ))}
+          {genres &&
+            genres.map((genre) => (
+              <li key={genre.id} className="px-3 py-1 bg-gray-700 rounded-full">
+                {genre.name}
+              </li>
+            ))}
         </ul>
         <div className="text-lg mt-1">{overview}</div>
       </div>

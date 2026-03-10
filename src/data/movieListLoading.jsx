@@ -9,7 +9,7 @@ const option = {
 async function getPopularMovies() {
   try {
     const response = await fetch(
-      "https://api.themoviedb.org/3/movie/popular?language=korean&page=1",
+      "https://api.themoviedb.org/3/movie/popular?language=ko-KR&page=1",
       option,
     );
     const data = await response.json();
@@ -20,5 +20,3 @@ async function getPopularMovies() {
 }
 
 export { getPopularMovies };
-
-// const sfwMovies = data.results.filter((movie) => !movie.adult);

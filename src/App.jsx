@@ -11,7 +11,7 @@ function App() {
       </div>
       <Routes className="flex-1 overflow-y-auto">
         <Route path="/" element={<HomePage />} />
-        <Route path="/detail/" element={<MovieDetail />} />
+        <Route path="/detail/:id" element={<MovieDetail />} />
       </Routes>
     </div>
   );
